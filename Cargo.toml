@@ -1,0 +1,23 @@
+[package]
+name = "rust_tiny_os"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+# low-level helpers
+x86_64 = "0.18.10"
+volatile = "0.4.5"
+spin = "0.9.2"
+bootloader = { version = "0.10.23", package = "bootloader" }
+
+
+[package.metadata.bootimage]
+# the bootloader crate name used by `bootimage`
+# leave default — bootimage will pick up bootloader
+
+
+[profile.dev]
+panic = "abort"
+[profile.release]
+panic = "abort"

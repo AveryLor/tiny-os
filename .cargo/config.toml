@@ -1,0 +1,7 @@
+[unstable]
+build-std = ["core"]
+
+
+[target.x86_64-blog_os.json]
+runner = "bootimage runner"
+
